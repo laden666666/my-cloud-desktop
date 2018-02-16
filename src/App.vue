@@ -3,14 +3,15 @@
 </template>
 
 <script>
-import Desktop from './components/Desktop.vue'
+    import Desktop from './components/Desktop.vue'
+    import './style/icons/iconfont.css'
 
-export default {
-    name: 'App',
-    components: {
-        Desktop
+    export default {
+        name: 'App',
+        components: {
+            Desktop
+        }
     }
-}
 </script>
 
 <style>

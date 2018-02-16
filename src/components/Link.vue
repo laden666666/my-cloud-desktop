@@ -2,10 +2,10 @@
     <div class="link">
         <transition name="slide-fade">
             <template v-if="show">
-                <div class="link_link" v-if="!isFolder">
+                <div class="link_link" v-if="!isFolder" @click="openFolder(index)">
                     <Animation1 :image="image" :title="title" :describe="describe"></Animation1>
                 </div>
-                <div class="link_Folder" v-else>
+                <div class="link_Folder" v-else @click="openFolder(index)">
                     <component  :is="LinkList" :linkList="linkList" class="link_Folder_list" ></component>
                     <span class="link_Folder_title">{{title}}</span>
                 </div>
@@ -15,6 +15,8 @@
 </template>
 
 <script>
+    import pathService from '../service/pathService'
+
     let LinkList
     export function setLinkList(_linkList) {
         LinkList = _linkList
@@ -77,6 +79,11 @@
             setTimeout(()=>{
                 this.show = true
             }, this.index * 40)
+        },
+        methods: {
+            openFolder(index){
+                pathService.openFolder(index)
+            }
         }
     }
 </script>
@@ -165,12 +172,16 @@
         background-color: rgba(0, 0, 0, .5);
         color: #fff;
         transition: all .35s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+
         height: 22px;
         box-sizing: border-box;
         border: 0 solid transparent;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 0 5px;
     }
 
     .link:hover .link_Folder_title{
@@ -179,6 +190,11 @@
         border-radius: 50%;
         border-width: 15px;
         border-color: rgba(255, 255, 255, .2);
+        white-space: normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
     }
 
     /* 可以设置不同的进入和离开动画 */

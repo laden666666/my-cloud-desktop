@@ -2,10 +2,12 @@
     {
         "title": "使用VS Code开发asp.net core (上)",
         "image": "http://www.yangqq.com/ceshi/hover/img/1.jpg",
+        "url": "https://cn.vuejs.org/v2/guide/transitions.html",
         "describe": "使用Visual Studio Code来开发asp.net core项目. 对vscode的使用进行了介绍, 并且包含一些技巧, 例如: 代码段 snippet, zen coding, debugging等等. ..."
     },
     {
         "title": "前端小白的个人习惯和笔记(一)",
+        "url": "https://cn.vuejs.org/v2/guide/transitions.html",
         "describe": "快键键 已经敲代码这么久,分享一下自己的小习惯(可能有点乱有点杂) 可以说是window用户的神器,可以随意开启全局的软件,配合cmd使用, 直接关闭这样就省下按鼠标的时间 在webstorm中快速打开本项目文件也可以直接打开cmd,不会打开webstorm自带的cmd我 习惯使用 这个切换窗口你们 ..."
     },
     {
@@ -106,7 +108,24 @@
             },
             {
                 "title": "4.C++中的函数重载,C++调用C代码,new/delete关键字,namespace(命名空间)",
-                "describe": "本章主要内容: 1)函数重载 2)C++调用C代码 3)new/delete关键字实现动态内存分配 4)namespace命名空间 大家都知道,在生活中,动词和不同的名词搭配一起,意义都会大有不同,比如”玩”: 玩游戏 玩卡牌 玩足球 所以在C++中,便出现了函数重载(JAVA,c#等语言都有函数重 ..."
+                "isFolder": true,
+                "describe": "本章主要内容: 1)函数重载 2)C++调用C代码 3)new/delete关键字实现动态内存分配 4)namespace命名空间 大家都知道,在生活中,动词和不同的名词搭配一起,意义都会大有不同,比如”玩”: 玩游戏 玩卡牌 玩足球 所以在C++中,便出现了函数重载(JAVA,c#等语言都有函数重 ...","isFolder": true,
+                "linkList": [
+                    {
+                        "title": "使用VS Code开发asp.net core (上)",
+                        "image": "http://www.yangqq.com/ceshi/hover/img/1.jpg",
+                        "describe": "使用Visual Studio Code来开发asp.net core项目. 对vscode的使用进行了介绍, 并且包含一些技巧, 例如: 代码段 snippet, zen coding, debugging等等. ..."
+                    },
+                    {
+                        "title": "前端小白的个人习惯和笔记(一)",
+                        "image": "http://www.yangqq.com/ceshi/hover/img/1.jpg",
+                        "describe": "快键键 已经敲代码这么久,分享一下自己的小习惯(可能有点乱有点杂) 可以说是window用户的神器,可以随意开启全局的软件,配合cmd使用, 直接关闭这样就省下按鼠标的时间 在webstorm中快速打开本项目文件也可以直接打开cmd,不会打开webstorm自带的cmd我 习惯使用 这个切换窗口你们 ..."
+                    },
+                    {
+                        "title": "DaemonSet 案例分析 - 每天5分钟玩转 Docker 容器技术（130）",
+                        "describe": "本节详细分析两个 k8s 自己的 DaemonSet：kube-flannel-ds 和 kube-proxy 。 ..."
+                    }
+                ]
             },
             {
                 "title": "DirectSound---简易Wav播放器",

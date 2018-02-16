@@ -4,7 +4,8 @@
         <div class="desktop_background">
             <div class="desktop_background-image" :style="{backgroundImage: `url(${backgroundImage})`,}"></div>
         </div>
-        <LinkList class="desktop_link-list" :linkList="linkData"/>
+        <LinkList v-if="Array.isArray(linkData)" class="desktop_link-list" :linkList="linkData" :key="linkDataKey"/>
+        <ViewBlog v-else :link="linkData"></ViewBlog>
     </div>
 </template>
 
@@ -12,7 +13,9 @@
     import Link from './Link.vue'
     import Header from './Header.vue'
     import LinkList from './LinkList.vue'
-    import linkData from '../data/linkData.json'
+    import ViewBlog from './App/ViewBlog.vue'
+
+    import {mapState} from 'vuex'
 
     export default {
         props:{
@@ -21,12 +24,27 @@
                 default: 'none'
             }
         },
+        computed: {
+            ...mapState({
+                linkData(state){
+                    return state.selectPath.reduce((arr, path)=>{
+                        if(arr[path].isFolder){
+                            return arr[path].linkList
+                        } else {
+                            return arr[path]
+                        }
+                    }, state.linkList)
+                },
+                linkDataKey(state){
+                    return state.selectPath.join('-')
+                }
+            })
+        },
         components:{
-            Link, LinkList, Header
+            Link, LinkList, Header, ViewBlog
         },
         data () {
             return {
-                linkData,
             }
         }
     }
@@ -67,7 +85,7 @@
     }
 
     .desktop_link-list{
-        padding: 10px 0;
+        padding: 30px 0 10px;
         box-sizing: border-box;
         position: absolute;
         width: 100vw;

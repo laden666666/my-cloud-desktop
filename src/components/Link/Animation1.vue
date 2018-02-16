@@ -31,7 +31,7 @@
         opacity: 0.7;
         transition: opacity 0.35s, transform 0.35s;
         transform: translate(-40px, 0);
-        z-index: 0;
+        z-index: 1;
         top: 0;
         left: 0;
     }
@@ -45,6 +45,7 @@
         color: #fff;
         transform: translate(0, 45px);
         transition: opacity 0.35s, transform 0.35s;
+        z-index: 2;
     }
     .animation1_title::before{
         display: inline-block;
@@ -67,7 +68,7 @@
         max-height: 36px;
     }
     .animation1_describe{
-        z-index: 1;
+        z-index: 2;
         margin-top: 60px;
         color: rgba(255,255,255,0.9);
         transform: translate(0, 45px);

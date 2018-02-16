@@ -1,7 +1,7 @@
 <template>
-    <div class="my">
+    <a class="my" :href="myData.home" target="_blank">
         <img class="my_photo" :src="myData.photo">
-    </div>
+    </a>
 </template>
 
 <script>
@@ -18,6 +18,9 @@
 <style lang="scss" scoped>
     @import "../style/style.scss";
 
+    .my{
+        display: block;
+    }
     .my_photo{
         width: 30px;
         height: 30px;
