@@ -177,7 +177,7 @@
         background-color: rgba(0, 0, 0, .8);
         height: $linkWidth;
         border-radius: 50%;
-        border-width: 5px;
+        border-width: 15px;
         border-color: rgba(255, 255, 255, .2);
     }
 
