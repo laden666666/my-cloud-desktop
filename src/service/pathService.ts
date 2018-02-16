@@ -2,9 +2,13 @@ import store from '../store'
 
 export default {
     openFolder(index){
-        store.state.selectPath.push(index)
+        const arr = Array.prototype.concat(store.state.selectPath)
+        arr.push(index)
+        location.hash = arr.join('-')
     },
     selectFolderLevel(index){
-        store.state.selectPath.splice(index, store.state.selectPath.length)
+        const arr = Array.prototype.concat(store.state.selectPath)
+        arr.splice(index, store.state.selectPath.length)
+        location.hash = arr.join('-')
     },
 }
