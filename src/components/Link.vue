@@ -82,7 +82,14 @@
         },
         methods: {
             openFolder(index){
-                pathService.openFolder(index)
+                if(this.url && this.url.startsWith('http')){
+                    var a = document.createElement('a')
+                    a.setAttribute('target', '_blank')
+                    a.setAttribute('href', this.url)
+                    a.click()
+                } else {
+                    pathService.openFolder(index)
+                }
             }
         }
     }

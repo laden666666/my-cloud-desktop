@@ -1,6 +1,6 @@
 <template>
     <div class="link-list">
-        <Link v-for="(link, index) in linkList" :key="index" :image="link.image" :title="link.title" :describe="link.describe" :url="''"
+        <Link v-for="(link, index) in linkList" :key="index" :image="link.image" :title="link.title" :describe="link.describe" :url="link.url"
             :linkList="link.linkList || []" :isFolder="link.isFolder" :index="hasAnimation ? index : 0"/>
         <div class="link-block" v-for="index in 20"></div>
     </div>
